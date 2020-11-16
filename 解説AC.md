@@ -3,3 +3,4 @@
 - [ABC145-D-Knight](https://atcoder.jp/contests/abc145/tasks/abc145_d)
 - [ABC107-C-Candles](https://atcoder.jp/contests/abc107/tasks/arc101_a)
 - [ARC027-B-大事なことなのでZ回書きました](https://atcoder.jp/contests/arc027/tasks/arc027_2)
+- [CODEFESTIVAL2016Final-B-Exactly-N-points](https://atcoder.jp/contests/cf16-final/tasks/codefestival_2016_final_b)

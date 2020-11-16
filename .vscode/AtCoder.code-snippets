@@ -58,7 +58,7 @@
 		"prefix": "atcoder",
 		"body":[
 			"#include<bits/stdc++.h>",
-			"#define rep(i, n) for (long long i = 0; i < (int)(n); i++)",
+			"#define rep(i, s, n) for (long long i = s; i < (int)(n); i++)",
 			"#define all(a) a.begin(), a.end()",
 			"#define put(i) cout<<fixed<<i<<endl",
 			"using namespace std;",
