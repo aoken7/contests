@@ -4,3 +4,6 @@
 - [ABC107-C-Candles](https://atcoder.jp/contests/abc107/tasks/arc101_a)
 - [ARC027-B-大事なことなのでZ回書きました](https://atcoder.jp/contests/arc027/tasks/arc027_2)
 - [CODEFESTIVAL2016Final-B-Exactly-N-points](https://atcoder.jp/contests/cf16-final/tasks/codefestival_2016_final_b)
+- [ABC087-D-People-on-a-Line](https://atcoder.jp/contests/abc087/tasks/arc090_b)
+- [ABC052-C-Factors-of-Factorical](https://atcoder.jp/contests/abc052/tasks/arc067_a)
+- [ABC079-D-Wall](https://atcoder.jp/contests/abc079/tasks/abc079_d)
