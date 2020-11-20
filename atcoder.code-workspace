@@ -16,7 +16,8 @@
 			"valarray": "cpp",
 			"deque": "cpp",
 			"string": "cpp",
-			"vector": "cpp"
+			"vector": "cpp",
+			"ostream": "cpp"
 		},
 		"C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}"
 	}
