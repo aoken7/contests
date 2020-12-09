@@ -55,7 +55,7 @@
 
 	"C++ templete":{
 		"scope": "cpp",
-		"prefix": "atcoder",
+		"prefix": "programmingcontest",
 		"body":[
 			"#include<bits/stdc++.h>",
 			"#define rep(i, s, n) for (long long i = s; i < (int)(n); i++)",
@@ -89,7 +89,7 @@
             "    vector<int> r;",
             " ",
             "    UnionFind(int N) {",
-            "        r = vector<int>(N, -1);",
+            "        r = vector<int>(N+1, -1);",
             "    }",
             " ",
             "    int root(int x) {",
@@ -174,6 +174,7 @@
     
     "eratosthenes": {
         "prefix": "eratosthenes",
+        "scope": "python",
         "body": [
             "def eratosthenes(limit):",
             "    A = [i for i in range(2, limit+1)]",
@@ -203,6 +204,33 @@
         "description": ""
     },
 
+    "eratosthenes-cpp": {
+        "prefix": "eratosthenes",
+        "scope": "cpp",
+        "body": [
+            "vector<pair<long long, long long> > eratosthenes(long long N) {",
+            "    vector<pair<long long, long long> > res;",
+            "    for (long long a = 2; a * a <= N; ++a) {",
+            "        if (N % a != 0) continue;",
+            "        long long ex = 0; // 指数",
+            "",
+            "        // 割れる限り割り続ける",
+            "        while (N % a == 0) {",
+            "            ++ex;",
+            "            N /= a;",
+            "        }",
+            "",
+            "        // その結果を push",
+            "        res.push_back({a, ex});",
+            "    }",
+            "",
+            "    // 最後に残った数について",
+            "    if (N != 1) res.push_back({N, 1});",
+            "    return res;",
+            "}",
+        ],
+        "description": ""
+    },
 
 
 }
