@@ -19,7 +19,7 @@ int main(){
         for(ll j=0; j<hp+1; j++){
             ll x = min(hp, j + a_atk[i]);
             dp[x] = min(dp[x], dp[j] + b_mp[i]);
-            cout << "x:" << x << " dp:" << dp[x] << endl;
+            //cout << "x:" << x << " dp:" << dp[x] << endl;
         }
     }
 
