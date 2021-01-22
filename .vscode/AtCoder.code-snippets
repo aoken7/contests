@@ -20,6 +20,7 @@
 		"scope": "python",
 		"prefix": "atcoder",
 		"body":[
+            "#!/usr/bin/env python3\n",
 			"import numpy as np\n"
 		]
 	},
@@ -61,7 +62,8 @@
 			"#define rep(i, s, n) for (long long i = s; i < (int)(n); i++)",
 			"#define all(a) a.begin(), a.end()",
             "#define put(i) cout<<fixed<<i<<endl",
-            "#define putl(a) for(auto x:a)cout<<x<<' '; cout<<endl",
+            "#define debug(i) cerr<<fixed<<i<<endl",
+            "#define debugl(a) for(auto x:a)cerr<<x<<' '; cout<<endl",
 			"using namespace std;",
 			"using ll = long long;\n",
 			"int main()"
@@ -84,8 +86,6 @@
         "prefix": "unionfind",
         "body": [
             "struct UnionFind {",
-            "    //自身が親であれば、その集合に属する頂点数に-1を掛けたもの",
-            "    //そうでなければ親のid",
             "    vector<int> r;",
             " ",
             "    UnionFind(int N) {",
@@ -232,5 +232,26 @@
         "description": ""
     },
 
+    "point": {
+        "prefix": "point",
+        "body": [
+            "struct Point{",
+            "    ll x,y;",
+            "    bool operator<(const Point &right) {",
+            "        return x == right.x ? y < right.y : x < right.x;",
+            "    }",
+            "}typedef P;",
+        ],
+        "description": ""
+    },
+    
+    "chminmax": {
+        "prefix": "chminmax",
+        "body": [
+            "template<class T> void chmin(T& a, T b){ a > b ? a = b : a; }",
+            "template<class T> void chmax(T& a, T b){ a < b ? a = b : a; }",
+        ],
+        "description": ""
+    },
 
 }
