@@ -1,3 +1,4 @@
+//pdf見た
 #include<bits/stdc++.h>
 #define all(a) a.begin(), a.end()
 #define put(i) cout<<fixed<<i<<endl

@@ -22,3 +22,8 @@
 - [ABC185-C-Duodecim_Ferra](https://atcoder.jp/contests/abc185/tasks/abc185_c)
 - [ABC099-C-Strange_Bank](https://atcoder.jp/contests/abc099/submissions/me)
 - [ABC188-D-Sunuke_Prime](https://atcoder.jp/contests/abc188/tasks/abc188_d)
+- [ABC165-C-Many_Requirementes](https://atcoder.jp/contests/abc165/tasks/abc165_c)
+- [ABC189-D-Logical_Expression](https://atcoder.jp/contests/abc189/tasks/abc189_d)
+- [ABC134-D-Preparing_Boxes](https://atcoder.jp/contests/abc134/tasks/abc134_d)
+- [ABC133-D-Rain_Flows_into_Dams](https://atcoder.jp/contests/abc133/tasks/abc133_d)
+- [ABC-C-Chocolate_Bar](https://atcoder.jp/contests/abc062/tasks/arc074_a)
