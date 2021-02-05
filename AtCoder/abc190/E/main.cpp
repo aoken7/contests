@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<atcoder/all>
 #define all(a) a.begin(), a.end()
 #define put(i) cout<<fixed<<i<<endl
 #define putl(a) for(auto q:a)cout<<q<<' '; cout<<endl
@@ -7,6 +6,10 @@
 using namespace std;
 using ll = long long;
 
+
 int main(){
+    ll n, m; cin >> n >> m;
+    vector<ll> a(m), b(m);
+    rep(i,0,m) cin >> a[i] >> b[i];
 
 }

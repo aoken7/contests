@@ -7,6 +7,20 @@
 using namespace std;
 using ll = long long;
 
-int main(){
 
+int main(){
+    ll n, m; cin >> n >> m;
+    
+    ll ans = 0;
+    atcoder::dsu uf(n+1);
+
+    rep(i,0,n){
+        ll a, b; cin >> a >> b;
+        if(!uf.same(a,b)){
+            ans++;
+            uf.merge(a,b);
+        }
+    }
+
+    put(ans);
 }

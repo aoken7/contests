@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<atcoder/all>
 #define all(a) a.begin(), a.end()
 #define put(i) cout<<fixed<<i<<endl
 #define putl(a) for(auto q:a)cout<<q<<' '; cout<<endl
@@ -8,5 +7,17 @@ using namespace std;
 using ll = long long;
 
 int main(){
-
+    ll a, b, c; cin >> a >> b >> c;
+    
+    if(a > b){
+        put("Takahashi");
+    }else if(a < b){
+        put("Aoki");
+    }else{
+        if(!c){
+            put("Aoki");
+        }else{
+            put("Takahashi");
+        }
+    }
 }
