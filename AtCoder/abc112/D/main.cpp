@@ -1,3 +1,4 @@
+//pdf見た
 #include<bits/stdc++.h>
 #include<atcoder/all>
 #define all(a) a.begin(), a.end()
@@ -7,6 +8,25 @@
 using namespace std;
 using ll = long long;
 
-int main(){
+set<ll> prime(ll x){
+    set<ll> st;
+    for(ll i=1; i*i<=x; i++){
+        if(x%i==0){
+            st.insert(x/i);
+            st.insert(i);
+        }
+    }
+    return st;
+}
 
+int main(){
+    ll n, m; cin >> n >> m;
+    
+    ll ans = 0;
+    auto tmp = prime(m);
+    for(auto x:tmp){
+        if(x*n <= m) ans = max(ans,x);
+    }
+
+    put(ans);
 }

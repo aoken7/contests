@@ -8,5 +8,9 @@ using namespace std;
 using ll = long long;
 
 int main(){
-
+    string s;
+    cin >> s;
+    map<char,int> mp;
+    for(auto x:s) mp[x]++;
+    put(700+mp['o']*100);
 }

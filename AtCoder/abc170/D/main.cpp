@@ -1,3 +1,4 @@
+//解説見た
 #include<bits/stdc++.h>
 #define all(a) a.begin(), a.end()
 #define put(i) cout<<fixed<<i<<endl
@@ -6,18 +7,6 @@
 #define rep(i,s,n) for(long long i=s;i<(long long)(n);i++)
 using namespace std;
 using ll = long long;
-
-vector<ll> prime(ll x){
-    vector<ll> ret;
-    rep(i,1,sqrt(x)+1){
-        if(x % i == 0){
-            ret.push_back(i);
-            if(x/i!=x)
-                ret.push_back(x/i);
-        }
-    }
-    return ret;
-}
 
 int main(){
     ll n; cin >> n;
@@ -31,7 +20,9 @@ int main(){
     vector<bool> dp(a_max+1,true);
 
     for(auto x:mp){
-        for(ll i=x.first*2; i<=a_max; i*=2){
+        ll j = x.first;
+        for(ll i=x.first*2; i<=a_max; i+=j){
+            //if(x.second > 1) break;
             dp[i] = false;
         }
     }
@@ -40,7 +31,7 @@ int main(){
         if(dp[x.first] and x.second < 2) ans++;
     }
 
-    rep(i,0,a_max) if(!dp[i]) put(i); 
+    //rep(i,0,a_max) if(dp[i]) if(mp.count(i)) cout<<i<<" "; cout<<endl; 
 
     put(ans);
 }

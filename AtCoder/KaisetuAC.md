@@ -19,7 +19,6 @@
 - [ARC084-C-Snuke_Festival](https://atcoder.jp/contests/arc084/tasks/arc084_a)
 - [ABC063-D-Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
 - [ARC059-D-アンバランス](https://atcoder.jp/contests/arc059/tasks/arc059_b)
-- [ABC185-C-Duodecim_Ferra](https://atcoder.jp/contests/abc185/tasks/abc185_c)
 - [ABC099-C-Strange_Bank](https://atcoder.jp/contests/abc099/submissions/me)
 - [ABC188-D-Sunuke_Prime](https://atcoder.jp/contests/abc188/tasks/abc188_d)
 - [ABC165-C-Many_Requirementes](https://atcoder.jp/contests/abc165/tasks/abc165_c)
@@ -32,3 +31,5 @@
 - [ABC190-F-Shift_and_Inversions](https://atcoder.jp/contests/abc190/tasks/abc190_f)
 - [ABC090-D-Remainder_Reminder](https://atcoder.jp/contests/abc090/tasks/arc091_b)
 - [ABC146-D-Coloring_Edges_on_Tree](https://atcoder.jp/contests/abc146/tasks/abc146_d)
+- [ABC191-C-Digital_Graffiti](https://atcoder.jp/contests/abc191/tasks/abc191_c)
+- [ABC112-D-Partition](https://atcoder.jp/contests/abc112/submissions/20055774)

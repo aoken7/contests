@@ -2,7 +2,7 @@ import random
 import subprocess
 from subprocess import PIPE
 
-path = '/home/akeon/Source/ProgrammingContest/AtCoder/解説AC.md'
+path = 'KaisetuAC.md'
 
 with open(path) as f:
     lines = f.readlines();
