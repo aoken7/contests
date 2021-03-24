@@ -33,3 +33,6 @@
 - [ABC146-D-Coloring_Edges_on_Tree](https://atcoder.jp/contests/abc146/tasks/abc146_d)
 - [ABC191-C-Digital_Graffiti](https://atcoder.jp/contests/abc191/tasks/abc191_c)
 - [ABC112-D-Partition](https://atcoder.jp/contests/abc112/submissions/20055774)
+- [ABC059-C-Sequence](https://atcoder.jp/contests/abc059/tasks/arc072_a)
+- [ABC074-C-Sugar_Water](https://atcoder.jp/contests/abc074/tasks/arc083_a)
+- [ABC089-D-Practical_skill_Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)

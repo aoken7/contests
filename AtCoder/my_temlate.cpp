@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<atcoder/all>
 #define all(a) a.begin(), a.end()
 #define put(i) cout<<fixed<<i<<endl
 #define putl(a) for(auto q:a)cout<<q<<' '; cout<<endl
