@@ -22,7 +22,8 @@
 			"list": "cpp",
 			"unordered_map": "cpp",
 			"unordered_set": "cpp",
-			"cmath": "cpp"
+			"cmath": "cpp",
+			"cstdlib": "cpp"
 		},
 		"C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}"
 	}
