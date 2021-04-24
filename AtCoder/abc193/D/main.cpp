@@ -1,6 +1,7 @@
-#include <bits/stdc++.h>
+//解説放送そのまま
+//確率つらすぎる
 
-#include <atcoder/all>
+#include <bits/stdc++.h>
 #define all(a) a.begin(), a.end()
 #define put(i) cout << fixed << i << endl
 #define putl(a)                        \
@@ -10,22 +11,14 @@
 using namespace std;
 using ll = long long;
 
-
-std::vector<std::vector<long long>> comb(int n, int r) {
-  std::vector<std::vector<long long>> v(n + 1,std::vector<long long>(n + 1, 0));
-  for (int i = 0; i < v.size(); i++) {
-    v[i][0] = 1;
-    v[i][i] = 1;
-  }
-  for (int j = 1; j < v.size(); j++) {
-    for (int k = 1; k < j; k++) {
-      v[j][k] = (v[j - 1][k - 1] + v[j - 1][k]);
+ll score(string s) {
+    vector<ll> cnt(10);
+    iota(all(cnt), 0LL);
+    for (auto c : s) {
+        cnt[c - '0'] *= 10;
     }
-  }
-  return v;
+    return accumulate(all(cnt), 0LL);
 }
-
-
 
 int main() {
     ll k;
@@ -33,61 +26,27 @@ int main() {
     string s, t;
     cin >> s >> t;
 
-    map<ll, ll> mps, mpt;
-    rep(i, 0, 5) {
-        mps[s[i] - '0']++;
-        mpt[t[i] - '0']++;
-    }
-
-    ll ssum = 0, tsum = 0;
-
-    rep(i, 1, 9 + 1) {
-        ssum += i * pow(10, mps[i]);
-        tsum += i * pow(10, mpt[i]);
-    }
-
-    double ps = 0, pt = 0;
-
-    map<ll,ll> card;
-    rep(i,1,10){
-        card[i] = k;
-    }
-
-    for(auto x:mps){
-        card[x.first] -= x.second;
-    }
-    for(auto x:mpt){
-        card[x.first] -= x.second;
-    }
-
-
-    for(auto i:card) {
-        if(i.second <= 0) continue;
-        for(auto j:card) {
-            if(j.second <= 0) continue;
-            if(i == j and i.second < 2) continue;
-
-            ll tmps = ssum - i.first * pow(10, mps[i.first]) + i.first * pow(10, mps[i.first] + 1);
-            ll tmpt = tsum - j.first * pow(10, mpt[j.first]) + j.first * pow(10, mpt[j.first] + 1);
-            
-            if(tmps > tmpt){
-                ps++;
-                cout << "i:" << i.first << " " << tmps << ">" << tmpt << endl;
-            }else if(tmps < tmpt){
-                pt++;
-                cout << "j:" << j.first << " " << tmps << "<" << tmpt << endl;;
+    vector<ll> c(10, k);
+    c[0] = 0;
+    rep(i, 0, 4) { c[s[i] - '0']--; }
+    rep(i, 0, 4) { c[t[i] - '0']--; }
+    ll cnt = 0;
+    rep(a, 1, 10) {
+        rep(b, 1, 10) {
+            s[4] = '0' + a;
+            t[4] = '0' + b;
+            if (score(s) > score(t)) {
+                if (a == b)
+                    cnt += c[a] * (c[a] - 1);
+                else
+                    cnt += c[a] * c[b];
             }
-            //cout << i.first << "," << j.first << endl; 
         }
     }
+    ll C = 0;
+    rep(i, 0, 10) { C += c[i]; }
+    ll tot = C * (C - 1);
+    double ans = (double)cnt / tot;
 
-    ll cardnum = 0;
-    for(auto x:card){
-        if(x.second > 0) cardnum += x.second;
-        //cout << x.first << " " << x.second << endl;;
-    }
-    auto c = comb(cardnum,2);
-    put(c[cardnum][2]);
-    put(ps);
-    put(ps/c[cardnum][2]);
+    put(ans);
 }

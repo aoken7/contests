@@ -5,42 +5,12 @@
 using namespace std;
 using ll = long long;
 
-long long gcd(long long a, long long b) {
-    if (b == 0) {
-        return a;
-    } else {
-        return gcd(b, a % b);
-    }
-}
-
-bool IsPrime(int num) {
-    if (num < 2)
-        return false;
-    else if (num == 2)
-        return true;
-    else if (num % 2 == 0)
-        return false;  // 偶数はあらかじめ除く
-
-    double sqrtNum = sqrt(num);
-    for (int i = 3; i <= sqrtNum; i += 2) {
-        if (num % i == 0) {
-            // 素数ではない
-            return false;
-        }
-    }
-
-    // 素数である
-    return true;
-}
-
 int main() {
     ll a, b;
     cin >> a >> b;
 
     ll ans = 1;
-
-    vector<ll> v;
-
+    /*
     for (ll i = 1; i <= 2e5; i++) {
         ll flag = 0;
         for (ll j = 1; j <= min(b, ll(2e5)); j++) {
@@ -52,7 +22,15 @@ int main() {
                 ans = i;
             }
         }
+    }*/
+
+    for(ll c = b; ;c--){
+        //cout << "a+c-1/c:" << (a+c-1) / c << " b/c:" << b /c << endl;
+        if((a+c-1) / c < b / c){
+            put(c);
+            return 0;
+        }
     }
 
-    put(ans);
+    //put(ans);
 }

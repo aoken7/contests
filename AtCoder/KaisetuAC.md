@@ -43,4 +43,6 @@
 - [ABC121-D-XOR_World](https://atcoder.jp/contests/abc121/tasks/abc121_d)
 - [AGC008-A-Simpl_Calculator](https://atcoder.jp/contests/agc008/tasks/agc008_a)
 - [Tenka1-PBC](https://atcoder.jp/contests/tenka1-2017-beginner/tasks/tenka1_2017_c)
-- [AGC011-Airport_Bus](https://atcoder.jp/contests/agc011/tasks/agc011_a)
+- [AGC011-A-Airport_Bus](https://atcoder.jp/contests/agc011/tasks/agc011_a)
+- [ABC125-C-GCD_on_Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c)
+- [ABC197-D-Opposite](https://atcoder.jp/contests/abc197/tasks/abc197_d)

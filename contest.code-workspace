@@ -23,7 +23,8 @@
 			"unordered_map": "cpp",
 			"unordered_set": "cpp",
 			"cmath": "cpp",
-			"cstdlib": "cpp"
+			"cstdlib": "cpp",
+			"complex": "cpp"
 		},
 		"C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}"
 	}

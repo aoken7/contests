@@ -6,22 +6,16 @@ using namespace std;
 using ll = long long;
 
 int main(){
-    ll x, y, z; cin >> x >> y >> z;
+    double x, y, z; cin >> x >> y >> z;
 
-    double t = y / (double)x;
+    ll ok = 1e9;
+    ll ng = -1;
 
-        //put(t);
-    rep(i,1,1e7){
-        double s = i / (double)z;
-        //put(s);
-        if(s > t){
-            for(ll j=i-1; ; j--){
-                double s = j / (double)z;
-                if(s < t){
-                    put(j);
-                    return 0;
-                }
-            }
-        }
+    while(abs(ok-ng) > 1){
+        ll mid = (ok + ng) / 2;
+        if(y/x > mid/z) ng = mid;
+        else ok = mid;
     }
+
+    put(ng);
 }

@@ -7,5 +7,8 @@ using namespace std;
 using ll = long long;
 
 int main(){
+    ll n; cin >> n;
+    ll a; cin >> a;
 
+    put(n*n-a);
 }

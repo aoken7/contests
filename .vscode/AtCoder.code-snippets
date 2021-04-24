@@ -282,6 +282,33 @@
         ],
         "description": ""
     },
+    "putl": {
+        "prefix": "putl",
+        "scope": "cpp",
+        "body": [
+            "template <typename T>",
+            "void putl(T t) {",
+            "    for (auto x : t) cout << x << \" \";",
+            "    cout << endl;",
+            "}",
+        ],
+        "description": ""
+    },
 
+    "compare_by_b": {
+        "prefix": "compare_by_b",
+        "scope": "cpp",
+        "body": [
+            "bool compare_by_b(pair<int, int> a, pair<int, int> b) {",
+            "    if (a.second != b.second) {",
+            "        return a.second < b.second;",
+            "    } else {",
+            "        return a.first < b.first;",
+            "    }",
+            "}",
+            "",
+        ],
+        "description": ""
+    },
 
 }
