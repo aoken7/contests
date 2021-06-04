@@ -311,4 +311,41 @@
         "description": ""
     },
 
+    "megru_search": {
+        "prefix": "megru_search",
+        "scope": "cpp",
+        "body": [
+            "int megru_search() {",
+            "    ll ok = 0;        //最小値求めるときは ok = MAX",
+            "    ll ng = 1e9 + 7;  //                   ng = -1",
+            "    while (abs(ok - ng) > 1) {",
+            "        ll mid = (ok + ng) / 2;",
+            "        if (solve(mid)) {",
+            "            ok = mid;",
+            "        } else {",
+            "            ng = mid;",
+            "        }",
+            "    }",
+            "    return ok;",
+            "}",
+        ],
+        "description": ""
+    },
+
+    "2dim": {
+        "prefix": "2dim",
+        "scope": "cpp",
+        "body": [
+            "    a = vector<vector<ll>>(h,vector<ll>(w));",
+            "",
+            "    rep(x,0,w){",
+            "        rep(y,0,h){",
+            "            cin >> a[y][x];",
+            "        }",
+            "    }",
+        ],
+        "description": ""
+    },
+
+
 }

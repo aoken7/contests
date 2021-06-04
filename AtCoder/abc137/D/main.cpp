@@ -1,3 +1,4 @@
+//解説放送観た
 #include <bits/stdc++.h>
 #define all(a) a.begin(), a.end()
 #define put(i) cout << i << endl
@@ -5,35 +6,36 @@
 using namespace std;
 using ll = long long;
 
-int main() {
-    ll n, m;
-    cin >> n >> m;
-    vector<pair<ll, ll>> ab(n);
-    rep(i, 0, n) {
-        ll a, b;
-        cin >> a >> b;
-        ab[i] = {a, b};
-    }
+ll n, m;
+vector<pair<ll, ll>> ab;
 
-    sort(all(ab), greater<pair<ll, ll>>());
-
+ll solve(queue<pair<ll, ll>> pair_q) {
     ll ans = 0;
     priority_queue<ll> q;
-
-    ll cnt = 0;
-    for (ll i = m; i > 0; i--) {
-        if(cnt >= n) break;
-        if (ab[cnt].first <= i) {
-            q.push(ab[cnt].second);
+    for (ll i = m - 1; i >= 0; i--) {
+        while (!pair_q.empty()) {
+            if (pair_q.front().first + i <= m) {
+                q.push(pair_q.front().second);
+                pair_q.pop();
+            } else {
+                break;
+            }
         }
-        cnt++;
+        if(!q.empty()) ans += q.top(), q.pop();
     }
+    return ans;
+}
 
-    rep(i, 0, m) {
-        if(q.empty()) break;
-        ans += q.top();
-        q.pop();
-    }
+int main() {
+    cin >> n >> m;
+    ab = vector<pair<ll, ll>>(n);
+    rep(i, 0, n) cin >> ab[i].first >> ab[i].second;
+
+    sort(all(ab));
+    queue<pair<ll, ll>> q;
+    for (auto x : ab) q.push(x);
+
+    ll ans = solve(q);
 
     put(ans);
 }
