@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#define all(a) a.begin(), a.end()
+#define put(i) cout<<i<<endl
+#define rep(i,s,n) for(long long i=s;i<(long long)(n);i++)
+using namespace std;
+using ll = long long;
+
+int main(){
+    ll n; cin >> n;
+    
+    map<string,int> mp;
+    set<int> st;
+
+
+    rep(i,0,n){
+        string s;
+        cin >> s;
+        
+        if(!mp.count(s)){
+            mp[s]++;
+            st.insert(i+1);
+        }
+    }
+
+    for(auto x:st){
+        put(x);
+    }
+}

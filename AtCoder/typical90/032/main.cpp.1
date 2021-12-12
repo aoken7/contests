@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+#define all(a) a.begin(), a.end()
+#define put(i) cout << i << endl
+#define rep(i, s, n) for (long long i = s; i < (long long)(n); i++)
+using namespace std;
+using ll = long long;
+
+ll n;
+int a[100][100];
+ll m;
+vector<ll> x(100), y(100);
+
+set<vector<ll>> st;
+ll ans = 1e9;
+
+template <typename T>
+void putl(T t) {
+    for (auto x : t) cout << x << " ";
+    cout << endl;
+}
+
+ll solve() {
+    vector<ll> v;
+    rep(i, 1, n + 1) { v.push_back(i); }
+
+    do {
+        ll flag = 1;
+        rep(i, 0, m) {
+            rep(j, 0, n - 1) {
+                if (v[j] == x[i] and v[j + 1] == y[i] or
+                    v[j] == y[i] and v[j + 1] == x[i]) {
+                    flag = 0;
+                    break;
+                }
+                if(!flag) break;
+            }
+        }
+        if(flag) st.insert(v);
+    } while (std::next_permutation(v.begin(), v.end()));
+
+    if(st.size() < 1) return -1;
+
+    for(auto z:st){
+        ll tmp = 0;
+        rep(i,0,n){
+            tmp += a[z[i]-1][i];
+        }
+
+        ans = min(ans, tmp);
+    }
+
+    return ans;
+}
+
+int main() {
+
+    cin >> n;
+    rep(i, 0, n) {
+        rep(j, 0, n) { cin >> a[i][j]; }
+    }
+    cin >> m;
+    rep(i, 0, m) cin >> x[i] >> y[i];
+
+    put(solve());
+}

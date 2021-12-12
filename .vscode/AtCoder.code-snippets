@@ -54,21 +54,24 @@
 		]
 	},
 
-	"C++ templete":{
-		"scope": "cpp",
-		"prefix": "programmingcontest",
-		"body":[
-			"#include<bits/stdc++.h>",
-			"#define rep(i, s, n) for (long long i = s; i < (int)(n); i++)",
-			"#define all(a) a.begin(), a.end()",
-            "#define put(i) cout<<fixed<<i<<endl",
-            "#define debug(i) cerr<<fixed<<i<<endl",
-            "#define debugl(a) for(auto x:a)cerr<<x<<' '; cout<<endl",
-			"using namespace std;",
-			"using ll = long long;\n",
-			"int main()"
-		]	
-	},
+    "contest": {
+        "prefix": "contest",
+        "body": [
+            "#include<bits/stdc++.h>",
+            "#define all(a) a.begin(), a.end()",
+            "#define put(i) cout<<i<<endl",
+            "#define rep(i,s,n) for(long long i=s;i<(long long)(n);i++)",
+            "using namespace std;",
+            "using ll = long long;",
+            "",
+            "int main(){",
+            "    ",
+            "}",
+        ],
+        "description": ""
+    },
+
+
 
 	"C++ for":{
 		"scope": "cpp",

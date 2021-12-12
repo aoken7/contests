@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#define all(a) a.begin(), a.end()
+#define put(i) cout<<i<<endl
+#define rep(i,s,n) for(long long i=s;i<(long long)(n);i++)
+using namespace std;
+using ll = long long;
+
+int main(){
+    ll n; cin >> n;
+    vector<ll> c1(n,0), c2(n,0);
+    rep(i,0,n){
+        ll p; cin >> p;
+        if(p==1) cin >> c1[i];
+        else cin >> c2[i];
+    }
+
+    vector<ll> c1_sum(n+1,0), c2_sum(n+1, 0);
+    rep(i,0,n){
+        c1_sum[i+1] = c1[i] + c1_sum[i];
+        c2_sum[i+1] = c2[i] + c2_sum[i];
+    }
+
+    ll q; cin >> q;
+    rep(i,0,q){
+        ll l, r;
+        cin >> l >> r;
+        cout << c1_sum[r] - c1_sum[l-1] << " " << c2_sum[r] - c2_sum[l-1] << endl;
+    }
+}

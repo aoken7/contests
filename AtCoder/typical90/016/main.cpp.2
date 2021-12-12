@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+#define all(a) a.begin(), a.end()
+#define put(i) cout << i << endl
+#define rep(i, s, n) for (long long i = s; i < (long long)(n); i++)
+using namespace std;
+using ll = long long;
+
+ll n;
+ll a, b, c;
+
+int main() {
+    cin >> n;
+    cin >> a >> b >> c;
+
+    ll ans = 1e9;
+
+    rep(i, 0, 10000) {
+        rep(j, 0, 10000 - i) {
+            if(a * i + b * j > n) break;
+            if ((n - (a * i + b * j)) % c == 0) {
+                ans = min(ans, ((n - (a * i + b * j))) / c + i + j);
+            }
+        }
+    }
+    put(ans);
+}

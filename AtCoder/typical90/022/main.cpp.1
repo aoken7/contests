@@ -1,0 +1,19 @@
+//解説見た
+
+#include <bits/stdc++.h>
+#define all(a) a.begin(), a.end()
+#define put(i) cout << i << endl
+#define rep(i, s, n) for (long long i = s; i < (long long)(n); i++)
+using namespace std;
+using ll = long long;
+
+ll a, b, c;
+
+int main() {
+    cin >> a >> b >> c;
+
+    ll r = __gcd(a, __gcd(b,c));
+    ll ans = a / r + b / r + c / r - 3;
+
+    put(ans);   
+}

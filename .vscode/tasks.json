@@ -5,22 +5,23 @@
             "label": "C/C++: g++ アクティブなファイルのビルド",
             "command": "/usr/bin/g++",
             "args": [
+                "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "a.out",
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": {
-                "kind": "build",
+            "group":{
+                "kind":"build",
                 "isDefault": true
             },
-            "detail": "デバッガーによって生成されたタスク。"
+            "detail": "コンパイラ: /usr/bin/g++"
         }
     ],
     "version": "2.0.0"

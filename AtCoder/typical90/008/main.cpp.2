@@ -1,0 +1,48 @@
+//解説見た
+
+#include <bits/stdc++.h>
+#define all(a) a.begin(), a.end()
+#define put(i) cout << i << endl
+#define rep(i, s, n) for (long long i = s; i < (long long)(n); i++)
+using namespace std;
+using ll = long long;
+
+ll mod = 1e9 + 7;
+
+ll n;
+string s;
+
+ll solve() {
+    ll ans = 0;
+    map<char, ll> mp;
+    string atcoder = "atcoder";
+    vector<vector<ll>> dp(n + 1, vector<ll>(atcoder.size() + 1, 0));
+
+    dp[0][0] = 1;
+    // reverse(all(s));
+
+    rep(i, 0, n) {
+        rep(j, 0, atcoder.size()+1) {
+            dp[i + 1][j] += dp[i][j];
+            if (s[i] == 'a' and j == 0) dp[i + 1][j + 1] += dp[i][j];
+            if (s[i] == 't' and j == 1) dp[i + 1][j + 1] += dp[i][j];
+            if (s[i] == 'c' and j == 2) dp[i + 1][j + 1] += dp[i][j];
+            if (s[i] == 'o' and j == 3) dp[i + 1][j + 1] += dp[i][j];
+            if (s[i] == 'd' and j == 4) dp[i + 1][j + 1] += dp[i][j];
+            if (s[i] == 'e' and j == 5) dp[i + 1][j + 1] += dp[i][j];
+            if (s[i] == 'r' and j == 6) dp[i + 1][j + 1] += dp[i][j];
+        }
+        rep(j,0,atcoder.size()+1) dp[i+1][j] %= mod;
+    }
+
+    rep(i, 0, atcoder.size()) {
+        //rep(j, 0, n + 1) { printf("%2lld ", dp[j][i]); }cout << endl;
+    }
+    return dp[n][atcoder.size()];
+}
+
+int main() {
+    cin >> n;
+    cin >> s;
+    put(solve());
+}

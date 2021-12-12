@@ -1,0 +1,87 @@
+#include <bits/stdc++.h>
+#define all(a) a.begin(), a.end()
+#define put(i) cout << i << endl
+#define rep(i, s, n) for (long long i = s; i < (long long)(n); i++)
+using namespace std;
+using ll = long long;
+
+template <typename T>
+void putl(T t) {
+    for (auto x : t) cout << x << " ";
+    cout << endl;
+}
+
+struct UnionFind {
+    vector<int> r;
+
+    UnionFind(int N) { r = vector<int>(N + 1, -1); }
+
+    int root(int x) {
+        if (r[x] < 0) return x;
+        return r[x] = root(r[x]);
+    }
+
+    bool unite(int x, int y) {
+        x = root(x);
+        y = root(y);
+        if (x == y) return false;
+        if (r[x] > r[y]) swap(x, y);
+        r[x] += r[y];
+        r[y] = x;
+        return true;
+    }
+
+    int size(int x) { return -r[root(x)]; }
+};
+
+ll h, w;
+
+ll convert(ll r, ll c) { return r * w + c; }
+
+int main() {
+    cin >> h >> w;
+    ll q;
+    cin >> q;
+
+    UnionFind UF((h+1) * (w+1));
+     vector<vector<ll>> a(h, vector<ll>(w, 0));
+    //int a[w][h];
+    //rep(i, 0, w) rep(j, 0, h) a[i][j] = 0;
+
+    rep(i, 0, q) {
+        ll t;
+        cin >> t;
+        if (t == 1) {
+            ll r, c;
+            cin >> r >> c;
+            r--, c--;
+            a[r][c] = 1;
+
+            if (r > 0 and a[r - 1][c])
+                UF.unite(convert(r - 1, c), convert(r, c));
+            if (r < h - 1 and a[r + 1][c])
+                UF.unite(convert(r + 1, c), convert(r, c));
+            if (c > 0 and a[r][c - 1])
+                UF.unite(convert(r, c - 1), convert(r, c));
+            if (c < w - 1 and a[r][c + 1])
+                UF.unite(convert(r, c + 1), convert(r, c));
+
+        } else {
+            ll ra, ca, rb, cb;
+            cin >> ra >> ca >> rb >> cb;
+            ra--, ca--, rb--, cb--;
+
+            if (a[ra][ca] and a[rb][cb] and
+                UF.root(convert(ra, ca)) == UF.root(convert(rb, cb)))
+                put("Yes");
+            else
+                put("No");
+        }
+        /*
+        for (auto x : a) putl(x);
+        put("-------------------");
+        rep(i, 0, h * w) cout << UF.root(i) << " ";
+        cout << endl;
+        */
+    }
+}

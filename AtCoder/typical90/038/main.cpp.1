@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#define all(a) a.begin(), a.end()
+#define put(i) cout<<i<<endl
+#define rep(i,s,n) for(long long i=s;i<(long long)(n);i++)
+using namespace std;
+using ll = long long;
+
+ll gcd(ll a, ll b) {
+    if (b==0) return a;
+    else return gcd(b, a%b);
+}
+
+ll lcm(ll a, ll b) {
+    ll tmp = a * b / gcd(a, b);
+    if(tmp > 1e18){
+        put("Large");
+        exit(0);
+    }
+    return tmp;
+}
+
+
+int main(){
+    ll a, b; cin >> a >> b;
+    put(lcm(a,b));
+}
