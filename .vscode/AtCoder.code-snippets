@@ -350,5 +350,20 @@
         "description": ""
     },
 
+    "": {
+        "prefix": "go",
+        "scope": "go",
+        "body": [
+            "package main",
+            "",
+            "import \"fmt\"",
+            "",
+            "func main() {",
+            "",
+            "}",
+            "",
+        ],
+        "description": ""
+    },
 
 }
