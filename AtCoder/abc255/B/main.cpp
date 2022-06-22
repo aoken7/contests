@@ -5,4 +5,13 @@
 using namespace std;
 using ll = long long;
 
-int main() {}
+int main() {
+    ll n, k;
+    cin >> n >> k;
+    vector<ll> a(k);
+    rep(i, 0, k) cin >> a[i];
+    vector<ll> x(n),y(n);
+    rep(i,0,n) cin >> x[i] >> y[i];
+
+    
+}

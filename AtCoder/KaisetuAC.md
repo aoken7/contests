@@ -49,3 +49,5 @@
 - [ABC137-D-Summer_Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d)
 - [ABC227_C_ABC_conjecture](https://atcoder.jp/contests/abc227/tasks/abc227_c)
 - [ABC251_E_Tahakashi_and_Animals](https://atcoder.jp/contests/abc251/tasks/abc251_e)
+- [ABC205_D_Kth_Excluded](https://atcoder.jp/contests/abc205/tasks/abc205_d)
+- [ABC235_D_Multiply_and_Rotate](https://atcoder.jp/contests/abc235/tasks/abc235_d)

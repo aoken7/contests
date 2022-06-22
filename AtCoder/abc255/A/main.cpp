@@ -5,4 +5,12 @@
 using namespace std;
 using ll = long long;
 
-int main() {}
+int main() {
+    ll r,c;
+    cin >> r >> c;
+    ll a[2][2];
+    cin >> a[0][0] >> a[0][1];
+    cin >> a[1][0] >> a[1][1];
+    r--, c--;
+    put(a[r][c]);
+}
