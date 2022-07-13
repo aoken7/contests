@@ -6,5 +6,10 @@ using namespace std;
 using ll = long long;
 
 int main() {
-    
+    ll n;
+    cin >> n;
+
+    if(n == 1) put("Yes");
+    else if (n > 4) put("Yes");
+    else put("No");
 }

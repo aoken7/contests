@@ -6,5 +6,17 @@ using namespace std;
 using ll = long long;
 
 int main() {
-    
+    ll  t;
+    cin >> t;
+
+    // x and y = a;
+    // x + y = s;
+    // x = s - y;
+    // (s - y) and y = a;
+    // s and y - y = a
+
+    rep(i,0,t){
+        ll a, s;
+        cin >> a >> s;
+    }
 }

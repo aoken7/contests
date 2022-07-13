@@ -5,4 +5,10 @@
 using namespace std;
 using ll = long long;
 
-int main() {}
+int main() {
+    ll x, a, d, n;
+    cin >> x >> a >> d >> n;
+
+    // a_n = a_0 + (n-1)d
+    
+}

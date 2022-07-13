@@ -6,5 +6,16 @@ using namespace std;
 using ll = long long;
 
 int main() {
-    
+    for (;;) {
+        ll n;
+        cin >> n;
+        if (n==0) break;
+
+        vector<ll> a(n);
+        rep(i, 0, n) cin >> a[i];
+
+        ll ans = *max_element(all(a));
+
+        put(ans);
+    }
 }
