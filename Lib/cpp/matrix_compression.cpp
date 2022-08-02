@@ -5,22 +5,8 @@
 using namespace std;
 using ll = long long;
 
-template <typename T>
-void putl(T t) {
-    for (auto x : t) cout << x << " ";
-    cout << endl;
-}
-
-vector<string> rotation(vector<string> s) {
-    ll w = s[0].size();
-    ll h = s.size();
-    vector<string> t(s[0].size());
-    rep(y, 0, w) {
-        rep(x, 0, h) { t[y].push_back(s[h - 1 - x][y]); }
-    }
-    return t;
-}
-
+//<lib>
+//<prefix>matrix_compression
 vector<string> compression(vector<string> s) {
     ll w = s[0].size();
     ll h = s.size();
@@ -58,24 +44,6 @@ vector<string> compression(vector<string> s) {
     }
     return t;
 }
+//<lib/>
 
-int main() {
-    ll n;
-    cin >> n;
-    vector<string> s(n), t(n);
-    rep(i, 0, n) cin >> s[i];
-    rep(i, 0, n) cin >> t[i];
-
-    auto comp_s = compression(s);
-    auto comp_t = compression(t);
-
-    rep(i, 0, 4) {
-        if (comp_s == comp_t) {
-            put("Yes");
-            return 0;
-        }
-        comp_t = rotation(comp_t);
-    }
-
-    put("No");
-}
+int main() {}

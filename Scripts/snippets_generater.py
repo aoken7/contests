@@ -21,11 +21,11 @@ def parse(code: list):
 def gen_snippets(code: list, file_name: str):
     snippets_json = dict()
 
-    if not re.search('prefix', code[0]):
+    if not re.search('<prefix>', code[0]):
         print("error: There is no prefix.")
         exit(1)
 
-    pref = code[0].replace('//prefix', '').strip()
+    pref = code[0].replace('//<prefix>', '').strip()
     scope = file_name.split('.')[-1]
 
     snippets_json[pref] = {"prefix": pref, "scope": scope, "body": code[1:]}

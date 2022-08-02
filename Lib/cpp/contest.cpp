@@ -1,5 +1,5 @@
 //<lib>
-//prefix contest
+//<prefix> contest
 #include<bits/stdc++.h>
 #define all(a) a.begin(), a.end()
 #define put(i) cout<<i<<endl

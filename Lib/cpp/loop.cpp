@@ -8,7 +8,8 @@ using ll = long long;
 int main() {
     ll n = 10;
     //<lib>
-    //prefix loop
-    for (ll i = 0; i < n; i++){}
+    //<prefix> loop
+for (ll i = 0; i < n; i++)
     //<lib/>
+    {}
 }

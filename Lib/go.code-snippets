@@ -1,0 +1,12 @@
+{
+    "div": {
+        "prefix": "div",
+        "scope": "go",
+        "body": [
+            "func div(x int, y int) int {",
+            "\treturn x / y",
+            "}",
+            ""
+        ]
+    }
+}

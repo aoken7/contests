@@ -5,11 +5,17 @@
 using namespace std;
 using ll = long long;
 
-//<lib>
-//<prefix> putl
-template <typename T>
-void putl(T t) {
-    for (auto x : t) cout << x << " ";
+int main(){
+    ll n;
+    cin >> n;
+    vector<ll> p(n);
+    rep(i,0,n) cin >> p[i];
+
+    map<ll,ll> mp;
+    rep(i,0,n){
+        mp[p[i]] = i + 1;
+    }
+
+    for(auto x:mp) cout << x.second << ' ';
     cout << endl;
 }
-//<lib/>
