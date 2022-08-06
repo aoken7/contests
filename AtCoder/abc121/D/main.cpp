@@ -1,5 +1,5 @@
-//pdf観た
-//Bitごとに独立に計算できるかなと思ったけどいい感じに実装出来なかった
+// pdf観た
+// Bitごとに独立に計算できるかなと思ったけどいい感じに実装出来なかった
 #include <bits/stdc++.h>
 #define all(a) a.begin(), a.end()
 #define put(i) cout << i << endl
@@ -7,27 +7,19 @@
 using namespace std;
 using ll = long long;
 
+ll oddsolve(ll x) { return (x + 1) / 2 % 2; }
+
+ll f(ll x) {
+    if (x % 2 == 1) {
+        return oddsolve(x);
+    } else {
+        return oddsolve(x + 1) ^ (x + 1);
+    }
+}
+
 int main() {
     ll a, b;
     cin >> a >> b;
 
-    ll ans = 0;
-
-    if(a == b){
-        ans = a;
-    }else if (a % 2 == 0) {
-        if ((b - a + 1) % 2 == 0) {
-            ans = 0;
-        }else{
-            ans = (1 xor b);
-        }
-    }else{
-        if ((b - a) % 2 == 0) {
-            ans = a;
-        }else{
-            ans = (a xor b);
-        }
-    }
-
-    put(ans);
+    put((f(b) ^ f(a - 1)));
 }
