@@ -1,24 +1,22 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define all(a) a.begin(), a.end()
-#define put(i) cout<<i<<endl
-#define rep(i,s,n) for(long long i=s;i<(long long)(n);i++)
+#define put(i) cout << i << endl
+#define rep(i, s, n) for (long long i = s; i < (long long)(n); i++)
 using namespace std;
 using ll = long long;
 
 //<lib>
-//prefix unionfind
+//<prefix> unionfind
 struct UnionFind {
     vector<int> r;
- 
-    UnionFind(int N) {
-        r = vector<int>(N+1, -1);
-    }
- 
+
+    UnionFind(int N) { r = vector<int>(N + 1, -1); }
+
     int root(int x) {
         if (r[x] < 0) return x;
         return r[x] = root(r[x]);
     }
- 
+
     bool unite(int x, int y) {
         x = root(x);
         y = root(y);
@@ -28,9 +26,7 @@ struct UnionFind {
         r[y] = x;
         return true;
     }
- 
-    int size(int x) {
-        return -r[root(x)];
-    }
+
+    int size(int x) { return -r[root(x)]; }
 };
 //<lib/>

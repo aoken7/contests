@@ -6,7 +6,7 @@ using namespace std;
 using ll = long long;
 
 //<lib>
-//prefix putl
+//<prefix> putl
 template <typename T>
 void putl(T t) {
     for (auto x : t) cout << x << " ";

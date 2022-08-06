@@ -10,7 +10,7 @@ ll solve(ll x){
 }
 
 //<lib>
-//prefix megru_search
+//<prefix> megru_search
 int megru_search() {
     ll ok = 0;        //最小値求めるときは ok = MAX
     ll ng = 1e9 + 7;  //                   ng = -1
