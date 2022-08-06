@@ -1,0 +1,31 @@
+{
+    "go": {
+        "prefix": "go",
+        "scope": "go",
+        "body": [
+            "package main",
+            "",
+            "import (",
+            "\t\"bufio\"",
+            "\t\"os\"",
+            ")",
+            "",
+            "func main() {",
+            "\tin := bufio.NewReader(os.Stdin)",
+            "\tout := bufio.NewWriter(os.Stdout)",
+            "\tdefer out.Flush()",
+            "}",
+            ""
+        ]
+    },
+    "div": {
+        "prefix": "div",
+        "scope": "go",
+        "body": [
+            "func div(x int, y int) int {",
+            "\treturn x / y",
+            "}",
+            ""
+        ]
+    }
+}

@@ -6,6 +6,6 @@ using namespace std;
 using ll = long long;
 
 int main() {
-    put(0.555555555);
-    cout << 0.555555555 << endl;
+    ll n, w;
+    cin >> n >> w;
 }
