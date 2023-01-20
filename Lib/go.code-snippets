@@ -1,4 +1,32 @@
 {
+    "// <prefix> go": {
+        "prefix": "// <prefix> go",
+        "scope": "go",
+        "body": [
+            "package main",
+            "",
+            "import (",
+            "\t\"bufio\"",
+            "\t\"fmt\"",
+            "\t\"os\"",
+            ")",
+            "",
+            "func input() int {",
+            "\tin := bufio.NewReader(os.Stdin)",
+            "\tout := bufio.NewWriter(os.Stdout)",
+            "\tdefer out.Flush()",
+            "",
+            "\tvar n int",
+            "\tfmt.Fscan(in, &n)",
+            "\treturn n",
+            "}",
+            "",
+            "func main() {",
+            "\tn := input()",
+            "}",
+            ""
+        ]
+    },
     "div": {
         "prefix": "div",
         "scope": "go",
