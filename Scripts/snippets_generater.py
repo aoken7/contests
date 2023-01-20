@@ -25,7 +25,8 @@ def gen_snippets(code: list, file_name: str):
         print("error: There is no prefix.")
         exit(1)
 
-    pref = code[0].replace('//<prefix>', '').strip()
+    pref = code[0].replace('//', '').strip()
+    pref = pref.replace('<prefix>','').strip()
     scope = file_name.split('.')[-1]
 
     snippets_json[pref] = {"prefix": pref, "scope": scope, "body": code[1:]}
@@ -42,7 +43,7 @@ def read_files(path: str):
     for file in files:
         tmp_path = path + '/' + file
         with open(tmp_path, 'r') as f:
-            code = parse(f.read().splitlines())
+            code = parse(f.read().strip().splitlines())
             snippets = gen_snippets(code, file)
             snippets_jsones.update(snippets)
 
